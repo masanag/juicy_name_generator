@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @adjective.name
+p
+  strong String:
+  = @adjective.string
+
+= link_to 'Edit', edit_adjective_path(@adjective)
+'|
+= link_to 'Back', adjectives_path

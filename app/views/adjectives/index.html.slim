@@ -1,0 +1,23 @@
+h1 Listing adjectives
+
+table
+  thead
+    tr
+      th Name
+      th String
+      th
+      th
+      th
+
+  tbody
+    - @adjectives.each do |adjective|
+      tr
+        td = adjective.name
+        td = adjective.string
+        td = link_to 'Show', adjective
+        td = link_to 'Edit', edit_adjective_path(adjective)
+        td = link_to 'Destroy', adjective, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Adjective', new_adjective_path

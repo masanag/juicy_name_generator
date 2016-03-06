@@ -1,0 +1,5 @@
+h1 Juicy Name Generator
+== render 'form'
+- if @user && @user.name.present?
+  .name = "#{@user.name}さんのJuicy Name:"
+  .juicy-name = @user.juicy_name
