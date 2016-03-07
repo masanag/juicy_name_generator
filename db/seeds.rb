@@ -8,8 +8,7 @@
 
 fn = open('db/names.txt')
 fn.each do |line|
-  line.chomp!
-  if line
+  if line.chomp!.present?
     name = Name.create(name: line)
     p name
   end
@@ -17,8 +16,7 @@ end
 
 fa = open('db/adjectives.txt')
 fa.each do |line|
-  line.chomp!
-  if line
+  if line.chomp!.present?
     adjective = Adjective.create(name: line)
     p adjective
   end

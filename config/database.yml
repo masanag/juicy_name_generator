@@ -6,11 +6,11 @@
 #
 default: &default
   adapter: postgresql
-  host: localhost
+  host: <%= ENV['DB_HOST_NAME'] %>
   encoding: utf8
   pool: 5
-  username:
-  password:
+  username: <%= ENV['DB_USR_NAME'] %>
+  password: <%= ENV['DB_PSSWRD'] %>
 
 development:
   <<: *default
