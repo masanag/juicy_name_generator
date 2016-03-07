@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :sessions, only: [:create, :new, :destroy]
+
+  resources :admins
+
   root to: 'users#index'
   resources :adjectives
 
